@@ -22,6 +22,8 @@ loadData <-function(){
     
     
     data <- rawdata[rawdata$Date==start | rawdata$Date==end, ]
+    #Add a column date time which combines the date and time column values for each row
+    data$DateTime <- strptime(paste(powerdata$Date,powerdata$Time), format = paste(dateFormat,timeFormat))
     rm("rawdata")
     return(data)
 }

@@ -14,8 +14,8 @@ marginLeft <- 5
 marginTop <- 2
 marginRight <- 1
 
-#Set the margins
-par(mar=c(marginBottom,marginLeft,marginTop,marginRight))
+#Set the margins and rows
+par( mfrow=c(1,1), mar=c(marginBottom,marginLeft,marginTop,marginRight))
 
 #Create a new png graphics device to plot the histogram
 png(filename = plotFileName, width = plotWidth, height = plotHeight, units = plotUnit)
