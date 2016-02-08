@@ -20,7 +20,7 @@ powerdata <- loadData()
 #Create a new png graphics device to plot the xyplot
 png(filename = plot2FileName, width = plotWidth, height = plotHeight, units = plotUnit)
 
-#Conrstruct the plot
+#Construct the plot
 plot(powerdata$DateTime,powerdata$Global_active_power,type="l", xlab = "", 
      ylab = "Global Active Power (kilowatts)")
 
