@@ -5,7 +5,7 @@ powerdata <- loadData()
 #data for plot
 plotHeight <- 480
 plotWidth <- 480
-plotFileName <- "plot1.png"
+plot1FileName <- "plot1.png"
 plotUnit <- "px"
 
 #data for margin in the plot
@@ -18,7 +18,7 @@ marginRight <- 1
 par( mfrow=c(1,1), mar=c(marginBottom,marginLeft,marginTop,marginRight))
 
 #Create a new png graphics device to plot the histogram
-png(filename = plotFileName, width = plotWidth, height = plotHeight, units = plotUnit)
+png(filename = plot1FileName, width = plotWidth, height = plotHeight, units = plotUnit)
 
 #generate the histogram
 hist(powerdata$Global_active_power,main = "Global Active Power", 

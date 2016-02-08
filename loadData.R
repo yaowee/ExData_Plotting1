@@ -19,10 +19,11 @@ loadData <-function(){
     #dates required to filter only the rows required
     start <- "1/2/2007"
     end <- "2/2/2007"
-    
+    dateFormat <- "%d/%m/%Y"
+    timeFormat <- "%H:%M:%S"
     
     data <- rawdata[rawdata$Date==start | rawdata$Date==end, ]
-    #Add a column date time which combines the date and time column values for each row
+    #Add a column date time which combines the date and time column values for each
     data$DateTime <- strptime(paste(powerdata$Date,powerdata$Time), format = paste(dateFormat,timeFormat))
     rm("rawdata")
     return(data)
